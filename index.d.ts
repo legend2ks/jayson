@@ -346,6 +346,7 @@ export interface WebsocketClientOptions extends ClientOptions {
 
 declare class WebsocketClient extends Client {
   constructor(options?: WebsocketClientOptions);
+  ws: WebSocket;
 }
 
 type ClientConstructor = ConstructorOf<Client, [options: ClientOptions] | [server: Server, options?: ClientOptions]> & {
